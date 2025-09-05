@@ -449,6 +449,46 @@
         <small class="muted">© <span id="year"></span> Jafaru • Web Designer and Developer • <a class="muted" href="#top">Back to top</a></small>
       </footer>
     </main>
+    <!-- Accessibility Widget -->
+    <div id="accessibility-widget" style="position:fixed;bottom:24px;right:24px;z-index:9999;">
+      <button id="acc-toggle" aria-label="Accessibility options" style="background:#3056d3;color:#fff;border:none;border-radius:50%;width:48px;height:48px;box-shadow:0 2px 8px rgba(0,0,0,0.15);font-size:22px;cursor:pointer;">
+        <i class="fas fa-universal-access"></i>
+      </button>
+      <div id="acc-panel" style="display:none;flex-direction:column;gap:8px;background:#fff;color:#222;padding:16px 12px;border-radius:14px;box-shadow:0 4px 24px rgba(48,86,211,0.10);margin-top:8px;align-items:flex-start;">
+        <button id="font-inc" style="background:#5596ee;border:none;border-radius:8px;padding:6px 12px;cursor:pointer;">A+</button>
+        <button id="font-dec" style="background:#5596ee;border:none;border-radius:8px;padding:6px 12px;cursor:pointer;">A-</button>
+        <button id="contrast-toggle" style="background:#5596ee;border:none;border-radius:8px;padding:6px 12px;cursor:pointer;">High Contrast</button>
+      </div>
+    </div>
+    <script>
+      // Widget toggle
+      document.getElementById('acc-toggle').onclick = function() {
+        var panel = document.getElementById('acc-panel');
+        panel.style.display = panel.style.display === 'flex' ? 'none' : 'flex';
+      };
+      // Font size controls
+      let fontSize = 100;
+      document.getElementById('font-inc').onclick = function() {
+        fontSize += 10;
+        document.body.style.fontSize = fontSize + '%';
+      };
+      document.getElementById('font-dec').onclick = function() {
+        fontSize = Math.max(80, fontSize - 10);
+        document.body.style.fontSize = fontSize + '%';
+      };
+      // High contrast toggle
+      let contrastOn = false;
+      document.getElementById('contrast-toggle').onclick = function() {
+        contrastOn = !contrastOn;
+        if (contrastOn) {
+          document.body.style.filter = 'invert(1) hue-rotate(180deg)';
+        } else {
+          document.body.style.filter = '';
+        }
+      };
+  
+    </script>
+    <!-- End Accessibility Widget -->
       <!-- tsParticles library -->
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
     <script>
