@@ -94,6 +94,12 @@
     section { padding: 38px 0; }
     .section-head { display: flex; align-items: end; justify-content: space-between; gap: 12px; margin: 58px 0px 18px 0px; }
     .section-head h2 { font-size: clamp(22px, 3vw, 28px); margin: 0; }
+    .section-title-main {
+      width: 100%;
+      text-align: center;
+      font-size: clamp(30px, 5vw, 42px);
+      line-height: 1.2;
+    }
     .muted { color: var(--muted); }
     .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
     .card { grid-column: span 12; background: color-mix(in oklab, var(--card) 94%, transparent); border: 1px solid color-mix(in oklab, var(--text) 12%, transparent); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); display: grid; grid-template-rows: 170px auto; transition: transform .2s ease, box-shadow .2s ease; }
@@ -234,7 +240,7 @@
       <!-- ================= work/projects Section ================= -->
       <section id="work" aria-labelledby="work-title">
         <div class="section-head">
-          <h2 id="work-title">Projects &amp; Impact</h2>
+          <h2 id="work-title" class="section-title-main">Projects &amp; Impact</h2>
         </div>
         <div class="project-tabs" role="tablist" aria-label="Project categories">
           <button class="project-tab" type="button" role="tab" aria-selected="true" data-filter="cms-wordpress">CMS-WordPress</button>
@@ -469,7 +475,7 @@ Visitors experience smoother browsing across devices,clients can now view comple
       <!-- ================= About Section ================= -->
       <section id="about" aria-labelledby="about-title">
         <div class="section-head">
-          <h2 id="about-title">About Me</h2>
+          <h2 id="about-title" class="section-title-main">About Me</h2>
         </div>
         <div class="about">
           <p>
@@ -482,8 +488,8 @@ Visitors experience smoother browsing across devices,clients can now view comple
            <p>Strong collaborator known for 
            translating 
            complex ideas into effective designs that align with business
-            goals and enhance user experience.</p>
-            <p> I help startups, entrepreneurs, businesses, and NGOs boost their
+            goals and enhance user experience.
+            I help startups, entrepreneurs, businesses, and NGOs boost their
               online presence, engage audiences, and convert visitors into leads.
                      I thrive in remote and hybrid teams, always eager to learn new concepts and tackle fresh challenges.</p>
            
@@ -526,7 +532,6 @@ Visitors experience smoother browsing across devices,clients can now view comple
 
       <section aria-labelledby="contact-title">
         <div id="contact"  style="display:flex;flex-wrap:wrap;gap:18px;justify-content:center;margin-bottom:32px;">
-          <a href="cv.pdf" download class="btn primary" style="min-width:160px;display:inline-flex;align-items:center;gap:10px;font-size:17px;"><i class="fas fa-file-download"></i> Download CV</a>
           <a href="mailto:jafarharun7@gmail.com" class="btn ghost" style="min-width:160px;display:inline-flex;align-items:center;gap:10px;font-size:17px;"><i class="fas fa-envelope"></i> Send Email</a>
           <a href="tel:+447827076021" class="btn ghost" style="min-width:160px;display:inline-flex;align-items:center;gap:10px;font-size:17px;"><i class="fas fa-phone"></i> Call Me</a>
           <a href="https://www.linkedin.com/in/jafaru-haruna-04444598/" target="_blank" rel="noopener" class="btn ghost" style="min-width:160px;display:inline-flex;align-items:center;gap:10px;font-size:17px;"><i class="fab fa-linkedin" style="color:#0a66c2;"></i> LinkedIn</a>
