@@ -112,7 +112,19 @@
     .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .card-body { padding: 16px; display: grid; gap: 8px; }
     .title { font-weight: 800; margin: 0; font-size: 18px; }
-    .meta { font-size: 13px; color: var(--muted); }
+    .meta {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .2px;
+      color: var(--muted);
+      background: color-mix(in oklab, var(--text) 6%, transparent);
+      border: 1px solid color-mix(in oklab, var(--text) 12%, transparent);
+    }
     .tags { display: flex; flex-wrap: wrap; gap: 8px; }
     .tag { font-size: 12px; padding: 6px 10px; border-radius: 999px; background: color-mix(in oklab, var(--text) 6%, transparent); border: 1px solid color-mix(in oklab, var(--text) 12%, transparent); }
     .project-tabs {
@@ -210,7 +222,7 @@
     .footer { border-top: 1px solid color-mix(in oklab, var(--text) 12%, transparent); padding: 28px 0 60px; text-align:center; }
     .hidden { display: none; }
     .success-message { padding: 16px; background: var(--card); border-radius: var(--radius); border: 1px solid color-mix(in oklab, var(--text) 12%, transparent); box-shadow: var(--shadow); margin-top: 16px; }
-.tags{
+.tags,.tag{
   display:none;
 }
 </style>
